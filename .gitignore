@@ -1,0 +1,16 @@
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+.vscode/
+.idea/
+*.suo
+*.user
+
+*.log
+error_log
+
+*.tmp
+*.bak
+*.swp
