@@ -28,7 +28,39 @@
   </div>
 </nav>
 
-<!-- SAYFA İÇERİĞİ BURAYA -->
+<div class="container page-content">
+
+  <h1>İlgi Alanlarım</h1>
+  <p class="lead">Film ve dizileri takip etmeyi seviyorum.</p>
+  <hr>
+
+  <!-- Favoriler -->
+  <section class="mb-5">
+    <h2>Favorilerim</h2>
+    <hr>
+    <div id="favoriler" class="row"></div>
+  </section>
+
+  <!-- Arama -->
+  <section class="mb-5">
+    <h2>Film & Dizi Ara</h2>
+    <hr>
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="input-group">
+          <input type="text" id="aramaInput" class="form-control" placeholder="Film veya dizi adı giriniz...">
+          <button class="btn btn-dark" onclick="filmAra()">Ara</button>
+        </div>
+      </div>
+    </div>
+    <div id="yukleniyor" style="display:none;" class="mb-3">
+      <p class="text-muted">Yükleniyor...</p>
+    </div>
+    <div id="hata" class="alert alert-danger" style="display:none;"></div>
+    <div id="sonuclar" class="row"></div>
+  </section>
+
+</div>
 
 <footer>
   <p>© 2026 Berra Ebrar Aytekin — Sakarya Üniversitesi Web Teknolojileri Projesi</p>
@@ -36,5 +68,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/main.js"></script>
+
+<script src="js/ilgi.js"></script>
+
 </body>
 </html>
