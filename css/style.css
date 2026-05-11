@@ -25,8 +25,22 @@ footer {
   padding: 16px;
   font-size: 14px;
 }
-@keyframes pulse {
-  0% { opacity: 1; }
-  50% { opacity: 0.4; }
-  100% { opacity: 1; }
+/* Responsive */
+@media (max-width: 768px) {
+  .page-content {
+    padding: 20px 0;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 12px;
+  }
 }
