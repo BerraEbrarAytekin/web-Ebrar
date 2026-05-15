@@ -4,6 +4,11 @@ function jsKontrol() {
   document.querySelectorAll("small[id$='-hata']").forEach(el => el.textContent = "");
   document.getElementById("js-basari").style.display = "none";
 
+  if (window.__vueApp) {
+    window.__vueApp.vueHatalar = {};
+    window.__vueApp.vueBasari = false;
+  }
+
   const adsoyad = document.getElementById("adsoyad").value.trim();
   if (adsoyad === "") {
     document.getElementById("adsoyad-hata").textContent = "Ad soyad boş bırakılamaz.";
@@ -58,7 +63,7 @@ function jsKontrol() {
 
 const { createApp } = Vue;
 
-createApp({
+const app = createApp({
   data() {
     return {
       form: {
@@ -79,6 +84,9 @@ createApp({
     vueKontrol() {
       this.vueHatalar = {};
       this.vueBasari = false;
+
+      document.querySelectorAll("small[id$='-hata']").forEach(el => el.textContent = "");
+      document.getElementById("js-basari").style.display = "none";
 
       if (!this.form.adsoyad.trim())
         this.vueHatalar.adsoyad = "Ad soyad boş bırakılamaz.";
@@ -110,3 +118,5 @@ createApp({
     }
   }
 }).mount("#app");
+
+window.__vueApp = app;
